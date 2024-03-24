@@ -1,0 +1,461 @@
+/* color */
+:root {
+    --main-bg-color: #0E121A;
+    --text-color: #f1f1f1;
+    --activate-sidebar: #2C72F6;
+    --comment-bg-color: #edf1ff;
+    --comment-line-color: #c2d8ff;
+}
+
+html, body {
+    font-size: 15px;
+    font-family: Verdana, sans-serif;
+}
+
+/* background */
+body {
+    background-color: var(--main-bg-color);
+    color: white;
+}
+
+a > h1, h2, h3, h4, h5 {
+    color: white;
+}
+
+
+/* The navigation bar */
+.top-bar {
+    display: flex;
+    overflow: visible;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    height: 5em;
+    z-index: 100;
+    padding: 0 0 0 0;
+}
+
+.top-bar, .top-bar ul {
+    background-color: var(--main-bg-color);
+}
+
+.top-bar > .fixed-section {
+    flex: 0 0 15em; /* 왼쪽 200px를 고정시킴 */
+    padding: 16px;
+    text-align: center;
+}
+
+.top-bar > .fixed-content {
+    /* 고정 내용에 대한 스타일 */
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.top-bar > .flex-section {
+    flex: 1; /* 나머지 부분을 유동적으로 설정 */
+    display: flex;
+    align-items: center;
+}
+
+.top-bar input {
+    background-color: var(--main-bg-color);
+    border-color: white;
+    color : white;
+}
+
+.top-bar input:focus {
+    background-color: var(--main-bg-color);
+    border-color: white;
+}
+
+.top-bar .button.hollow {
+    background-color: var(--main-bg-color);
+    border-color: white;
+    color : white;
+}
+
+.top-bar .button.hollow:focus {
+    border-color: #b0b0b0;
+    color : #b0b0b0;
+}
+
+.top-bar .button.hollow:hover {
+    border-color: #b0b0b0;
+    color : #b0b0b0;
+}
+
+
+
+.top-bar > .flex-section .top-bar-left {
+    flex: 3;
+}
+
+.top-bar > .flex-section .top-bar-right {
+    flex: 2;
+}
+
+.top-bar > .flex-section .top-bar-right > ul {
+    justify-content: flex-end;
+    margin-right: 100px;
+}
+
+
+.top-bar input {
+    max-width: none;
+}
+
+.title-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 3em;
+}
+
+
+/* The side navigation menu */
+.sidebar {
+    width: 15em;
+    background-color: var(--main-bg-color);
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    flex-flow: column wrap;
+    align-items: center;
+    display: flex;
+    top: 5em!important;
+}
+
+/* Sidebar links */
+.sidebar a {
+    display: block;
+    color: var(--text-color);
+    padding: 16px;
+    width: 12.5em;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Active/current link */
+.sidebar a.active {
+    background-color: var(--activate-sidebar);
+    color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+    margin-left: 15em;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
+.content {
+    text-align: center;
+}
+
+section {
+    margin-top: 5em;
+    z-index: 1;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end
+}
+
+
+.orbit-container {
+    height: 500px;
+}
+
+.top-bar-left .search-btn {
+    z-index: 10;
+}
+
+button {
+    white-space: nowrap;
+}
+
+.search-btn {
+    word-wrap: normal
+}
+
+
+.reveal {
+    width : 400px;
+    height: calc(400px * 4 / 5);
+    border-radius: 40px;
+    background-color: rgba(3, 16, 42, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+.reveal > .close {
+    height: 20px;
+    width: 20px;
+    border-radius: 5px;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+
+.reveal > .close:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "\00d7"; /* use the hex value here... */
+    color : white;
+    font-size: 25px;
+    line-height: 20px;
+    text-align: center;
+}
+
+
+.reveal > #naver_id_login {
+    position: absolute;
+    left: 50%;
+    top:  50%;
+    text-align: center;
+    transform: translate(-50%, 25%);
+}
+
+.reveal > #kakao-login-btn {
+    position: absolute;
+    left: 50%;
+    top:  50%;
+    text-align: center;
+    transform: translate(-50%, -125%);
+}
+
+.reveal img {
+    height : 45px;
+}
+
+.comments {
+    margin-top: 5em;
+    width:60%
+}
+
+.comments > .comment {
+    display: flex;
+    flex-direction: row;
+    height : 10em;
+    margin-top: 20px;
+    border: 5px solid var(--comment-line-color);
+    background-color: var(--comment-bg-color);
+    border-radius: 20px;
+    color: #0E121A;
+}
+
+.comments > .comment > .img_wrapper {
+    flex: 1;
+}
+
+.comments > .comment > .img_wrapper > img {
+    position: absolute;
+    -ms-transform: translateY(50%);
+    transform: translateX(-50%) translateY(50%);
+    width :70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.comments > .comment > .comment_wrapper {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.comment_wrapper * {
+    color: black;
+}
+
+.comment_wrapper .comment_wrapper_top {
+    display: flex;
+    height : 50px
+}
+
+.comment_wrapper_top > * {
+    height : 50px;
+}
+
+.comment_wrapper_top .nick_name {
+    text-align: left;
+    line-height: 2.5;
+}
+
+.comment_wrapper_top .date {
+    padding-left: 20px;
+    text-align: left;
+    color: #8d8d8d;
+    line-height: 4;
+}
+
+.comment_wrapper > .comment_wrapper_bottom {
+    text-align: left;
+}
+
+
+.comments > .comment > .like_wrapper {
+    flex: 1;
+    text-align: end;
+    padding-top: 10px;
+    padding-right: 10px;
+    position: relative;
+}
+
+.like_wrapper > img {
+    width : 25px;
+    height : 25px;
+}
+
+.like_wrapper > div {
+    font-size: 12px;
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+}
+
+.rss_articles {
+    height : auto;
+    text-align: center;
+    margin-left : 15em;
+
+}
+
+.rss_articles .rss_article {
+    max-width: 100%;
+    text-align: center;
+    margin : auto auto;
+    padding-top: 50px;
+    color: white;
+}
+
+.rss_article > .rss_article_channel_title {
+    text-align: start;
+}
+
+.rss_article > .rss_article_title {
+    text-align: start;
+    font-size: 20px;
+}
+
+.rss_article > .rss_article_content {
+    text-align: start;
+    font-size: 14px;
+}
+
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
+}
+
+/* On screens that are less than 640px wide, make the sidebar into a topbar */
+@media screen and (max-width: 640px) {
+
+    div.content {
+        margin-left: 0;
+    }
+
+    .top-bar {
+        display: none;
+    }
+
+    section {
+        margin-top: 3em;
+    }
+
+    .sidebar {
+        position: fixed;
+        width: 100%;
+        height: auto;
+        z-index: 100;
+        visibility: hidden;
+        top: 3em!important;
+    }
+
+    .sidebar a {
+        width: 95%;
+        border-bottom: 1px solid white;
+    }
+
+    .title-bar {
+        z-index: 150;
+    }
+
+    .lock-display {
+        top:0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: fixed;
+        background-color: var(--main-bg-color);
+        z-index: 50;
+        opacity: 70%;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .sidebar {
+        display: flex !important;
+    }
+}
+
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+
+}
+
+
+@media screen and (min-width: 900px) {
+
+    .top-bar-left .search-bar {
+        position: absolute;
+        width: 400px;
+        align-items: center;
+    }
+
+    /*.search-bar {
+        width: 300px;
+    }*/
+}
+
+@media screen and (max-width: 900px) {
+    .search-bar {
+        width: 80%;
+    }
+
+    .search-btn {
+        width: 20%;
+    }
+
+}
+
+@media screen and (max-width: 1100px) {
+    .comments {
+        width:100%
+    }
+}
+
+
+@media screen and (min-width: 1100px) {
+    .rss_articles {
+        max-width: 100%;
+
+    }
+
+    .rss_articles .rss_article {
+        max-width: 750px;
+    }
+}
