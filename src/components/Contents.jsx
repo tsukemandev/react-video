@@ -1,14 +1,26 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 
-import {Link} from "react-router-dom";
+import { Link,  useLocation } from "react-router-dom";
+
+
+import testData from '../data.json'
 
 
 export default function Contents() {
 
-    const [items, setItems] = useState([]); 
+    const [data, setData] = useState([]);
 
-    function getVideos() {
+    const location = useLocation();
+
+    useEffect(() => {
+        // location.state가 변경될 때마다 실행될 로직
+    
+        setData(location.state)
+        
+      }, [location]);
+
+    /*function getVideos() {
         fetch('http://localhost:8000/video/movie', {
             method: 'GET',
         })
@@ -32,7 +44,7 @@ export default function Contents() {
                 alert(error)
                 console.error('Error:', error);
             });
-    }
+    }*/
 
 
     useEffect(() => {
@@ -41,8 +53,12 @@ export default function Contents() {
             $(document).foundation()
         })
 
-        getVideos();
-        
+        console.log('after data : ' + JSON.stringify(data))
+        if (!data || data.length <= 0) {
+            setData(testData[0].data)
+        }
+        //getVideos();
+
     }, []);
 
     return (
@@ -60,43 +76,35 @@ export default function Contents() {
                                 <button className="orbit-next"><span
                                     className="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
                             </div>
-                            <Link to={"/home/video/1"}>
-                                <ul className="orbit-container">
-                                    <li className="is-active orbit-slide">
+
+                            <ul className="orbit-container">
+
+                                <li className="is-active orbit-slide">
+                                    <Link to={"/home/video/1"}>
                                         <figure className="orbit-figure">
                                             <img className="orbit-image"
-                                                 src={"https://media.cntraveller.com/photos/611bf0b8f6bd8f17556db5e4/master/pass/gettyimages-1146431497.jpg"}
-                                                 alt="Space"/>
+                                                src={"https://media.cntraveller.com/photos/611bf0b8f6bd8f17556db5e4/master/pass/gettyimages-1146431497.jpg"}
+                                                alt="Space" />
                                             <figcaption className="orbit-caption">Space, the final frontier.
                                             </figcaption>
                                         </figure>
-                                    </li>
-                                    <li className="orbit-slide">
+                                    </Link>
+                                </li>
+
+
+                                <li className="orbit-slide">
+                                    <Link to={"/home/video/2"}>
                                         <figure className="orbit-figure">
                                             <img className="orbit-image"
-                                                 src={"https://media.cntraveller.com/photos/611bf0b8f6bd8f17556db5e4/master/pass/gettyimages-1146431497.jpg"}
-                                                 alt="Space"/>
+                                                src={"https://media.cntraveller.com/photos/611bf0b8f6bd8f17556db5e4/master/pass/gettyimages-1146431497.jpg"}
+                                                alt="Space" />
                                             <figcaption className="orbit-caption">Lets Rocket!</figcaption>
                                         </figure>
-                                    </li>
-                                    <li className="orbit-slide">
-                                        <figure className="orbit-figure">
-                                            <img className="orbit-image"
-                                                 src={"https://media.cntraveller.com/photos/611bf0b8f6bd8f17556db5e4/master/pass/gettyimages-1146431497.jpg"}
-                                                 alt="Space"/>
-                                            <figcaption className="orbit-caption">Encapsulating</figcaption>
-                                        </figure>
-                                    </li>
-                                    <li className="orbit-slide">
-                                        <figure className="orbit-figure">
-                                            <img className="orbit-image"
-                                                 src={"https://media.cntraveller.com/photos/611bf0b8f6bd8f17556db5e4/master/pass/gettyimages-1146431497.jpg"}
-                                                 alt="Space"/>
-                                            <figcaption className="orbit-caption">Outta This World</figcaption>
-                                        </figure>
-                                    </li>
-                                </ul>
-                            </Link>
+                                    </Link>
+                                </li>
+
+                            </ul>
+
                         </div>
                         <nav className="orbit-bullets">
                             <button className="is-active" data-slide="0">
@@ -112,15 +120,16 @@ export default function Contents() {
 
                 <div className="row small-up-2 medium-up-3 large-up-4">
 
-                {items.map((item, index) => (
+
+                    {Array.isArray(data) && data.map((item) => (
                     // 데이터 배열을 순회하며 각 항목을 DOM 요소로 변환합니다.
 
-                    <Link to={{pathname : "/home/video/" + item.id, state : item.url}} className={"column"} key={item.id}>
-                    <img className="thumbnail" src={item.thumbnail} alt={""}/>
-                    <h5>{item.title}</h5>
-                    </Link>
+                        <Link to={{pathname : "/home/video/" + item.id, state : item.url}} className={"column"} key={item.id}>
+                            <img className="thumbnail" src={item.thumbnail} alt={""}/>
+                            <h5>{item.title}</h5>
+                        </Link>
 
-                ))}
+                    ))}
 
                     {/*
                     <Link to={"/home/video/1"} className={"column"}>

@@ -26,15 +26,15 @@ const router = createBrowserRouter([
         loader: AppLoader,
     },
     {
-        path: "/home",
+        path: "/:category",
         element: <App/>,
         children: [
             {
-                path: "/home",
+                path: "/:category",
                 element: <Contents/>,
             },
             {
-                path: "/home/video/:id",
+                path: "/:category/video/:id",
                 element: <Content/>,
             },
         ],
@@ -52,7 +52,7 @@ const router = createBrowserRouter([
         ],
 
     },
-    {
+    /*{
         path: "/upload",
         element: <App/>,
         children: [
@@ -81,7 +81,7 @@ const router = createBrowserRouter([
                 element: <h1>아직 개발되지 않은 페이지 입니다.</h1>,
             },
         ],
-    },
+    },*/
     {
         path: "/oauth/callback/:service",
         element: <OAuthRedirect/>,

@@ -13,7 +13,7 @@ import {useEffect} from "react";
 
 export async function loader() {
     if (window.location.pathname === "/") {
-        return redirect(`/home`)
+        return redirect(`/movie`)
     }
 }
 
