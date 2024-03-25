@@ -2,9 +2,7 @@ import React, {useEffect} from "react";
 
 export default function Comments() {
 
-    useEffect(() => {
-        console.log('ss : ' + process.env.PUBLIC_URL)
-    }, []);
+
 
     return (
         <article className={"comments"}>
