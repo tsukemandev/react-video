@@ -25,7 +25,7 @@ export default function News() {
         const rssFeedUrl = process.env.REACT_APP_RSS_FEED;// process.env.REACT_APP_KAKAO_CLIENTID_REST
 
         // fetch를 통해 RSS 피드 가져오기
-        await fetch(rssFeedUrl, requestOptions)
+        await fetch(rssFeedUrl)
             .then(response => response.json())
             .then(articles => setArticles(articles))
             .catch(error => console.error('Error fetching RSS:', error));
@@ -55,7 +55,11 @@ export default function News() {
 
     return (
         <div className={"rss_articles"}>
-            {getData()}
+            <div className={"news-wrapper"}>
+                <h1>RSS Movie News</h1>
+                {getData()}
+            </div>
+            
         </div>
     )
 }

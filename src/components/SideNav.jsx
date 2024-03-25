@@ -19,7 +19,7 @@ export default function SideNav(props) {
                     <NavLink to={item.path} state={item.data} className={({isActive, isPending}) => isActive ? "active" : isPending ? "pending" : ""} key={index}>{item.name}</NavLink>
                 ))}
                 
-                {/*<NavLink to={"/news"} className={({isActive, isPending}) => isActive ? "active" : isPending ? "pending" : ""}>RSS Movie News</NavLink>*/}
+                <NavLink to={"/news"} className={({isActive, isPending}) => isActive ? "active" : isPending ? "pending" : ""}>RSS Movie News</NavLink>
                 {/*<NavLink to={"/upload"} className={({isActive, isPending}) => isActive ? "active" : isPending ? "pending" : ""}>Upload</NavLink>*/}
             </div>
         </aside>
