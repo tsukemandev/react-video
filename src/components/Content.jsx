@@ -1,13 +1,15 @@
-import React, {useRef, useEffect} from "react";
+import React, { useRef, useEffect } from "react";
 import videojs from "video.js";
 import VideoJs from "./VideoJs";
 import Comments from "./Comments";
 import { useLocation } from "react-router-dom";
 
-export default function Content()  {
+export default function Content() {
 
     const location = useLocation();
-    const { url } = location.state || {}; // state가 없을 경우를 대비한 기본값 설정
+    const data = location.state || {}; // state가 없을 경우를 대비한 기본값 설정
+
+
 
     const playerRef = useRef(null);
 
@@ -46,10 +48,24 @@ export default function Content()  {
         <div className="content" id={"detail"}>
             <div className={"row"}>
                 <div className="w3-container w3-center w3-animate-left">
-                    <h1>HLS 애니메이션</h1>
+                    <h1>{data.title}</h1>
                 </div>
 
                 <VideoJs options={videoJsOptions} onReady={handlePlayerReady} />
+
+                <form className="comment-section-form">
+                    <div className="comment-section-box">
+                        <div className="row">
+                            <div className="small-12 column">
+
+                                <label>댓글
+                                    <textarea rows="2" type="text"></textarea>
+                                </label>
+                                <button className="button expanded">입력</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
                 <Comments></Comments>
             </div>
         </div>

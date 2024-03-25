@@ -10,6 +10,7 @@ import testData from '../data.json'
 export default function Contents() {
 
     const [data, setData] = useState([]);
+    const [category, setCategory] = useState('');
 
     const location = useLocation();
 
@@ -52,12 +53,15 @@ export default function Contents() {
         Jquery(document).ready($ => {
             $(document).foundation()
         })
-
-        console.log('after data : ' + JSON.stringify(data))
+        
         if (!data || data.length <= 0) {
             setData(testData[0].data)
         }
         //getVideos();
+
+        const pathname = window.location.pathname;
+        setCategory(pathname.split('/')[1])
+
 
     }, []);
 
@@ -124,7 +128,7 @@ export default function Contents() {
                     {Array.isArray(data) && data.map((item) => (
                     // 데이터 배열을 순회하며 각 항목을 DOM 요소로 변환합니다.
 
-                        <Link to={{pathname : "/home/video/" + item.id, state : item.url}} className={"column"} key={item.id}>
+                        <Link to={{pathname : "/" + category + "/video/" + item.id}} state={item} className={"column"} key={item.id}>
                             <img className="thumbnail" src={item.thumbnail} alt={""}/>
                             <h5>{item.title}</h5>
                         </Link>

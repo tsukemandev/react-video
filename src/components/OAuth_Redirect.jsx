@@ -51,17 +51,16 @@ export default function OAuthRedirect() {
         });
 
         let result = await response.json();
-        console.log('accessToken : ' + result.access_token)
 
         window.Kakao.Auth.setAccessToken(result.access_token)
         window.Kakao.API.request({
             url: '/v2/user/me',
         })
             .then(function(response) {
-                console.log(response);
+                
             })
             .catch(function(error) {
-                console.log(error);
+                
             });
     }
 

@@ -1,5 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
+import data from '../data.json'
+
 export default function Header(props){
     return (
         <header>
@@ -17,7 +19,7 @@ export default function Header(props){
 
             <div className="top-bar">
                 <div className="fixed-section">
-                    <Link to={"/home"}><h5>{process.env.REACT_APP_TITLE}</h5></Link>
+                    <Link to={"/movie"} state={data[0].data}><span className="app-name">{process.env.REACT_APP_TITLE}</span></Link>
 
                 </div>
 

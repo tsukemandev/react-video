@@ -7,7 +7,8 @@
     --comment-line-color: #c2d8ff;
 }
 
-html, body {
+html,
+body {
     font-size: 15px;
     font-family: Verdana, sans-serif;
 }
@@ -18,41 +19,55 @@ body {
     color: white;
 }
 
-a > h1, h2, h3, h4, h5 {
+a>h1,
+h2,
+h3,
+h4,
+h5 {
     color: white;
 }
 
+.app-name {
+    font-size: 20px;
+    color: white;
+}
 
 /* The navigation bar */
 .top-bar {
     display: flex;
     overflow: visible;
-    position: fixed; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
+    position: fixed;
+    /* Set the navbar to fixed position */
+    top: 0;
+    /* Position the navbar at the top of the page */
+    width: 100%;
+    /* Full width */
     height: 5em;
     z-index: 100;
     padding: 0 0 0 0;
 }
 
-.top-bar, .top-bar ul {
+.top-bar,
+.top-bar ul {
     background-color: var(--main-bg-color);
 }
 
-.top-bar > .fixed-section {
-    flex: 0 0 15em; /* 왼쪽 200px를 고정시킴 */
+.top-bar>.fixed-section {
+    flex: 0 0 15em;
+    /* 왼쪽 200px를 고정시킴 */
     padding: 16px;
     text-align: center;
 }
 
-.top-bar > .fixed-content {
+.top-bar>.fixed-content {
     /* 고정 내용에 대한 스타일 */
     background-color: #f2f2f2;
     color: #333;
 }
 
-.top-bar > .flex-section {
-    flex: 1; /* 나머지 부분을 유동적으로 설정 */
+.top-bar>.flex-section {
+    flex: 1;
+    /* 나머지 부분을 유동적으로 설정 */
     display: flex;
     align-items: center;
 }
@@ -60,7 +75,7 @@ a > h1, h2, h3, h4, h5 {
 .top-bar input {
     background-color: var(--main-bg-color);
     border-color: white;
-    color : white;
+    color: white;
 }
 
 .top-bar input:focus {
@@ -71,30 +86,30 @@ a > h1, h2, h3, h4, h5 {
 .top-bar .button.hollow {
     background-color: var(--main-bg-color);
     border-color: white;
-    color : white;
+    color: white;
 }
 
 .top-bar .button.hollow:focus {
     border-color: #b0b0b0;
-    color : #b0b0b0;
+    color: #b0b0b0;
 }
 
 .top-bar .button.hollow:hover {
     border-color: #b0b0b0;
-    color : #b0b0b0;
+    color: #b0b0b0;
 }
 
 
 
-.top-bar > .flex-section .top-bar-left {
+.top-bar>.flex-section .top-bar-left {
     flex: 3;
 }
 
-.top-bar > .flex-section .top-bar-right {
+.top-bar>.flex-section .top-bar-right {
     flex: 2;
 }
 
-.top-bar > .flex-section .top-bar-right > ul {
+.top-bar>.flex-section .top-bar-right>ul {
     justify-content: flex-end;
     margin-right: 100px;
 }
@@ -123,7 +138,7 @@ a > h1, h2, h3, h4, h5 {
     flex-flow: column wrap;
     align-items: center;
     display: flex;
-    top: 5em!important;
+    top: 5em !important;
 }
 
 /* Sidebar links */
@@ -188,14 +203,14 @@ button {
 
 
 .reveal {
-    width : 400px;
+    width: 400px;
     height: calc(400px * 4 / 5);
     border-radius: 40px;
     background-color: rgba(3, 16, 42, 0.3);
     backdrop-filter: blur(5px);
 }
 
-.reveal > .close {
+.reveal>.close {
     height: 20px;
     width: 20px;
     border-radius: 5px;
@@ -204,47 +219,49 @@ button {
     right: 25px;
 }
 
-.reveal > .close:after {
+.reveal>.close:after {
     position: absolute;
     top: 0;
     right: 0;
-    content: "\00d7"; /* use the hex value here... */
-    color : white;
+    content: "\00d7";
+    /* use the hex value here... */
+    color: white;
     font-size: 25px;
     line-height: 20px;
     text-align: center;
 }
 
 
-.reveal > #naver_id_login {
+.reveal>#naver_id_login {
     position: absolute;
     left: 50%;
-    top:  50%;
+    top: 50%;
     text-align: center;
     transform: translate(-50%, 25%);
 }
 
-.reveal > #kakao-login-btn {
+.reveal>#kakao-login-btn {
     position: absolute;
     left: 50%;
-    top:  50%;
+    top: 50%;
     text-align: center;
     transform: translate(-50%, -125%);
 }
 
 .reveal img {
-    height : 45px;
+    height: 45px;
 }
 
 .comments {
     margin-top: 5em;
-    width:60%
+    width: 60%;
+    padding-bottom : 50px;
 }
 
-.comments > .comment {
+.comments>.comment {
     display: flex;
     flex-direction: row;
-    height : 10em;
+    height: 10em;
     margin-top: 20px;
     border: 5px solid var(--comment-line-color);
     background-color: var(--comment-bg-color);
@@ -252,20 +269,20 @@ button {
     color: #0E121A;
 }
 
-.comments > .comment > .img_wrapper {
+.comments>.comment>.img_wrapper {
     flex: 1;
 }
 
-.comments > .comment > .img_wrapper > img {
+.comments>.comment>.img_wrapper>img {
     position: absolute;
     -ms-transform: translateY(50%);
     transform: translateX(-50%) translateY(50%);
-    width :70px;
+    width: 70px;
     height: 70px;
     border-radius: 50%;
 }
 
-.comments > .comment > .comment_wrapper {
+.comments>.comment>.comment_wrapper {
     flex: 4;
     display: flex;
     flex-direction: column;
@@ -278,11 +295,11 @@ button {
 
 .comment_wrapper .comment_wrapper_top {
     display: flex;
-    height : 50px
+    height: 50px
 }
 
-.comment_wrapper_top > * {
-    height : 50px;
+.comment_wrapper_top>* {
+    height: 50px;
 }
 
 .comment_wrapper_top .nick_name {
@@ -297,12 +314,12 @@ button {
     line-height: 4;
 }
 
-.comment_wrapper > .comment_wrapper_bottom {
+.comment_wrapper>.comment_wrapper_bottom {
     text-align: left;
 }
 
 
-.comments > .comment > .like_wrapper {
+.comments>.comment>.like_wrapper {
     flex: 1;
     text-align: end;
     padding-top: 10px;
@@ -310,12 +327,12 @@ button {
     position: relative;
 }
 
-.like_wrapper > img {
-    width : 25px;
-    height : 25px;
+.like_wrapper>img {
+    width: 25px;
+    height: 25px;
 }
 
-.like_wrapper > div {
+.like_wrapper>div {
     font-size: 12px;
     position: absolute;
     bottom: 10px;
@@ -323,43 +340,79 @@ button {
 }
 
 .rss_articles {
-    height : auto;
+    height: auto;
     text-align: center;
-    margin-left : 15em;
+    margin-left: 15em;
 
     display: flex;
     justify-content: center;
 }
 
-.rss_articles > .news-wrapper {
+.rss_articles>.news-wrapper {
     width: 900px;
 }
 
 .rss_articles h1 {
-    padding-top : 20px;
+    padding-top: 20px;
 }
 
 .rss_articles .rss_article {
     max-width: 100%;
     text-align: center;
-    margin : auto auto;
+    margin: auto auto;
     padding-top: 50px;
     color: white;
 }
 
-.rss_article > .rss_article_channel_title {
+.rss_article>.rss_article_channel_title {
     text-align: start;
 }
 
-.rss_article > .rss_article_title {
+.rss_article>.rss_article_title {
     text-align: start;
     font-size: 20px;
 }
 
-.rss_article > .rss_article_content {
+.rss_article>.rss_article_content {
     text-align: start;
     font-size: 14px;
 }
+
+
+.comment-section-form {
+    margin-top : 50px;
+}
+
+.comment-section-container {
+    background-color: #fefefe;
+    padding: 1rem;
+}
+
+.comment-section-author {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.comment-section-author .comment-section-name {
+    margin-left: 1rem;
+}
+
+.comment-section-author .comment-section-name p {
+    margin-bottom: 0;
+}
+
+.comment-section-box {
+    background-color: #a3b2bf;
+    padding: 1rem;
+}
+
+
+
 
 
 /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
@@ -391,7 +444,7 @@ button {
         height: auto;
         z-index: 100;
         visibility: hidden;
-        top: 3em!important;
+        top: 3em !important;
     }
 
     .sidebar a {
@@ -404,7 +457,7 @@ button {
     }
 
     .lock-display {
-        top:0;
+        top: 0;
         left: 0;
         bottom: 0;
         right: 0;
@@ -416,14 +469,14 @@ button {
 
     .rss_articles {
 
-        margin-left : 0;
+        margin-left: 0;
         padding-left: 20px;
     }
 
-    .rss_articles > .news-wrapper {
+    .rss_articles>.news-wrapper {
         width: 100%;
     }
-    
+
 }
 
 @media screen and (min-width: 640px) {
@@ -434,9 +487,7 @@ button {
 
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
-@media screen and (max-width: 700px) {
-
-}
+@media screen and (max-width: 700px) {}
 
 
 @media screen and (min-width: 900px) {
@@ -465,7 +516,7 @@ button {
 
 @media screen and (max-width: 1100px) {
     .comments {
-        width:100%
+        width: 100%
     }
 }
 
