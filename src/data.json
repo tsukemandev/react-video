@@ -3,9 +3,9 @@
         "type" : "movie",
         "path" : "/movie",
         "name" : "영화",
-        "data" : [
+        "banner" : [
             {
-                "thumbnail" : "https://media.cntraveller.com/photos/611bf0b8f6bd8f17556db5e4/master/pass/gettyimages-1146431497.jpg",
+                "thumbnail" : "/profile/color_profile.png",
                 "url" : "https://d1buzuj0s6bbq3.cloudfront.net/hungry-days-bump-of-chicken.m3u8",
                 "title" : "1",
                 "id" : 1
@@ -13,6 +13,26 @@
             {
                 "thumbnail" : "https://media.cntraveller.com/photos/611bf0b8f6bd8f17556db5e4/master/pass/gettyimages-1146431497.jpg",
                 "url" : "https://d1buzuj0s6bbq3.cloudfront.net/hungry-days-bump-of-chicken.m3u8",
+                "title" : "2",
+                "id" : 2
+            },
+            {
+                "thumbnail" : "https://media.cntraveller.com/photos/611bf0b8f6bd8f17556db5e4/master/pass/gettyimages-1146431497.jpg",
+                "url" : "https://d1buzuj0s6bbq3.cloudfront.net/hungry-days-bump-of-chicken.m3u8",
+                "title" : "3",
+                "id" : 3
+            }
+        ],
+        "data" : [
+            {
+                "thumbnail" : "/profile/color_profile.png",
+                "url" : "https://d3mzeaoeeawjex.cloudfront.net/movie/boundin/index.m3u8",
+                "title" : "1",
+                "id" : 1
+            },
+            {
+                "thumbnail" : "https://media.cntraveller.com/photos/611bf0b8f6bd8f17556db5e4/master/pass/gettyimages-1146431497.jpg",
+                "url" : "https://d3mzeaoeeawjex.cloudfront.net/movie/airmaster/index.m3u8",
                 "title" : "2",
                 "id" : 2
             },
@@ -41,10 +61,24 @@
         "type" : "anime",
         "path" : "/anime",
         "name" : "애니메이션",
-        "data" : [
+        "banner" : [
             {
                 "thumbnail" : "https://media.cntraveller.com/photos/611bf0b8f6bd8f17556db5e4/master/pass/gettyimages-1146431497.jpg",
                 "url" : "https://d1buzuj0s6bbq3.cloudfront.net/hungry-days-bump-of-chicken.m3u8",
+                "title" : "1",
+                "id" : 6
+            },
+            {
+                "thumbnail" : "https://media.cntraveller.com/photos/611bf0b8f6bd8f17556db5e4/master/pass/gettyimages-1146431497.jpg",
+                "url" : "https://d1buzuj0s6bbq3.cloudfront.net/hungry-days-bump-of-chicken.m3u8",
+                "title" : "2",
+                "id" : 7
+            }
+        ],
+        "data" : [
+            {
+                "thumbnail" : "https://media.cntraveller.com/photos/611bf0b8f6bd8f17556db5e4/master/pass/gettyimages-1146431497.jpg",
+                "url" : "https://d3mzeaoeeawjex.cloudfront.net/anime/onepiece-hungrydays/hungry-days-bump-of-chicken.m3u8",
                 "title" : "1",
                 "id" : 6
             },

@@ -10,14 +10,15 @@ import testData from '../data.json'
 export default function Contents() {
 
     const [data, setData] = useState([]);
+    const [banner, setBanner] = useState([])
     const [category, setCategory] = useState('');
 
     const location = useLocation();
 
     useEffect(() => {
         // location.state가 변경될 때마다 실행될 로직
-    
-        setData(location.state)
+        setBanner(location.state.banner)
+        setData(location.state.data)
         
       }, [location]);
 
@@ -116,8 +117,8 @@ export default function Contents() {
                                 <span className="show-for-sr" data-slide-active-label>Current Slide</span>
                             </button>
                             <button data-slide="1"><span className="show-for-sr">Second slide details.</span></button>
-                            <button data-slide="2"><span className="show-for-sr">Third slide details.</span></button>
-                            <button data-slide="3"><span className="show-for-sr">Fourth slide details.</span></button>
+                            {/*<button data-slide="2"><span className="show-for-sr">Third slide details.</span></button>
+                            <button data-slide="3"><span className="show-for-sr">Fourth slide details.</span></button>*/}
                         </nav>
                     </div>
                 </div>

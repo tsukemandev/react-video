@@ -20,7 +20,7 @@ export default function Content() {
         fluid: true,
         poster: 'https://picsum.photos/200',
         sources: [{
-            src: 'https://d1buzuj0s6bbq3.cloudfront.net/hungry-days-bump-of-chicken.m3u8',
+            src: data.url,
             type: 'application/x-mpegURL'
         }],
 
@@ -41,6 +41,7 @@ export default function Content() {
 
     useEffect(() => {
         window.scrollTo(0, 0);
+        console.log('content : ' + JSON.stringify(data))
     }, []);
 
 
