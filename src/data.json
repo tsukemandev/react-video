@@ -17,7 +17,7 @@
                 "id" : 2
             },
             {
-                "thumbnail" : "https://media.cntraveller.com/photos/611bf0b8f6bd8f17556db5e4/master/pass/gettyimages-1146431497.jpg",
+                "thumbnail" : "https://d3mzeaoeeawjex.cloudfront.net/movie/laluna/laluna/index.m3u8",
                 "url" : "https://d1buzuj0s6bbq3.cloudfront.net/hungry-days-bump-of-chicken.m3u8",
                 "title" : "3",
                 "id" : 3
@@ -25,33 +25,33 @@
         ],
         "data" : [
             {
-                "thumbnail" : "/profile/color_profile.png",
+                "thumbnail" : "https://d3mzeaoeeawjex.cloudfront.net/movie/thumbnail/boundin.jpg",
                 "url" : "https://d3mzeaoeeawjex.cloudfront.net/movie/boundin/index.m3u8",
-                "title" : "1",
+                "title" : "Bound In",
                 "id" : 1
             },
             {
-                "thumbnail" : "https://media.cntraveller.com/photos/611bf0b8f6bd8f17556db5e4/master/pass/gettyimages-1146431497.jpg",
+                "thumbnail" : "https://d3mzeaoeeawjex.cloudfront.net/movie/thumbnail/air-master.jpg",
                 "url" : "https://d3mzeaoeeawjex.cloudfront.net/movie/airmaster/index.m3u8",
-                "title" : "2",
+                "title" : "Air Master",
                 "id" : 2
             },
             {
-                "thumbnail" : "https://media.cntraveller.com/photos/611bf0b8f6bd8f17556db5e4/master/pass/gettyimages-1146431497.jpg",
-                "url" : "https://d1buzuj0s6bbq3.cloudfront.net/hungry-days-bump-of-chicken.m3u8",
-                "title" : "3",
+                "thumbnail" : "https://d3mzeaoeeawjex.cloudfront.net/movie/thumbnail/burn-e.jpg",
+                "url" : "https://d3mzeaoeeawjex.cloudfront.net/movie/burn-e/burn-e/index.m3u8",
+                "title" : "Burn-E",
                 "id" : 3
             },
             {
-                "thumbnail" : "https://media.cntraveller.com/photos/611bf0b8f6bd8f17556db5e4/master/pass/gettyimages-1146431497.jpg",
-                "url" : "https://d1buzuj0s6bbq3.cloudfront.net/hungry-days-bump-of-chicken.m3u8",
-                "title" : "4",
+                "thumbnail" : "https://d3mzeaoeeawjex.cloudfront.net/movie/thumbnail/day-and-night.jpg",
+                "url" : "https://d3mzeaoeeawjex.cloudfront.net/movie/day-and-night/day-and-night/index.m3u8",
+                "title" : "Day and Night",
                 "id" : 4
             },
             {
-                "thumbnail" : "https://media.cntraveller.com/photos/611bf0b8f6bd8f17556db5e4/master/pass/gettyimages-1146431497.jpg",
-                "url" : "https://d1buzuj0s6bbq3.cloudfront.net/hungry-days-bump-of-chicken.m3u8",
-                "title" : "5",
+                "thumbnail" : "https://d3mzeaoeeawjex.cloudfront.net/movie/thumbnail/laluna.jpg",
+                "url" : "https://d3mzeaoeeawjex.cloudfront.net/movie/laluna/laluna/index.m3u8",
+                "title" : "Laluna",
                 "id" : 5
             }
         ]
