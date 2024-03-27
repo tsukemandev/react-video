@@ -18,9 +18,10 @@ export default function Content() {
         controls: true,
         responsive: true,
         fluid: true,
-        poster: 'https://picsum.photos/200',
+        poster: !data.thumbnail ? data.banner : data.thumbnail,
         sources: [{
             src: data.url,
+            //src: 'https://d3mzeaoeeawjex.cloudfront.net/movie/dayandnight2/index.m3u8',
             type: 'application/x-mpegURL'
         }],
 
@@ -41,7 +42,6 @@ export default function Content() {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-        console.log('content : ' + JSON.stringify(data))
     }, []);
 
 
@@ -54,20 +54,23 @@ export default function Content() {
 
                 <VideoJs options={videoJsOptions} onReady={handlePlayerReady} />
 
+                
+                <Comments></Comments>
+
                 <form className="comment-section-form">
                     <div className="comment-section-box">
                         <div className="row">
-                            <div className="small-12 column">
+                            <div className="small-12 column" style={{display: 'flex', justifyContent: 'end'}}>
 
-                                <label>댓글
-                                    <textarea rows="2" type="text"></textarea>
-                                </label>
-                                <button className="button expanded">입력</button>
+                                
+                                <textarea rows="1" type="text"></textarea>
+                                
+                                <button className="button" style={{width: '100px'}}>입력</button>
                             </div>
                         </div>
                     </div>
                 </form>
-                <Comments></Comments>
+                
             </div>
         </div>
     )

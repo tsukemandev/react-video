@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 
-import { Link,  useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 
 import testData from '../data.json'
@@ -10,17 +10,27 @@ import testData from '../data.json'
 export default function Contents() {
 
     const [data, setData] = useState([]);
-    const [banner, setBanner] = useState([])
+    const [banners, setBanners] = useState([])
     const [category, setCategory] = useState('');
+    const [isMovie, setIsMovie] = useState(true);
 
     const location = useLocation();
+    const Jquery = require('jquery')
+
+
 
     useEffect(() => {
         // location.state가 변경될 때마다 실행될 로직
-        setBanner(location.state.banner)
-        setData(location.state.data)
-        
-      }, [location]);
+
+        if (location.state) {
+            setBanners(location.state.banners)
+            setData(location.state.data)
+        }
+        console.log('location useEffect')
+        setCategory(window.location.pathname.split('/')[1])
+
+        setIsMovie(window.location.pathname.split('/')[1] === 'movie')
+    }, [location]);
 
     /*function getVideos() {
         fetch('http://localhost:8000/video/movie', {
@@ -50,15 +60,33 @@ export default function Contents() {
 
 
     useEffect(() => {
-        const Jquery = require('jquery')
-        Jquery(document).ready($ => {
-            $(document).foundation()
-        })
-        
+        setTimeout(() => {
+            Jquery(document).ready($ => {
+                $(document).foundation()
+            })
+        }, 500)
+
+
+    }, [data, banners]);
+
+
+
+    useEffect(() => {
+
         if (!data || data.length <= 0) {
             setData(testData[0].data)
+            console.log('test1')
+            if (window.location.pathname.split('/')[1] === 'anime') {
+                setData(testData[1].data)
+                console.log('test2')
+            }
         }
-        //getVideos();
+
+
+    }, [category]);
+
+
+    useEffect(() => {
 
         const pathname = window.location.pathname;
         setCategory(pathname.split('/')[1])
@@ -82,33 +110,83 @@ export default function Contents() {
                                     className="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
                             </div>
 
-                            <ul className="orbit-container">
+                            {isMovie ? (
+                                <ul className="orbit-container">
 
-                                <li className="is-active orbit-slide">
-                                    <Link to={"/home/video/1"}>
-                                        <figure className="orbit-figure">
-                                            <img className="orbit-image"
-                                                src={"https://media.cntraveller.com/photos/611bf0b8f6bd8f17556db5e4/master/pass/gettyimages-1146431497.jpg"}
-                                                alt="Space" />
-                                            <figcaption className="orbit-caption">Space, the final frontier.
-                                            </figcaption>
-                                        </figure>
-                                    </Link>
-                                </li>
+                                    <li className="is-active orbit-slide">
+                                        <Link to={{ pathname: "/movie" + "/video/" + 4 }} state={{
+                                            "banner": "https://d3mzeaoeeawjex.cloudfront.net/movie/banner/dayandnight-banner.png",
+                                            "url": "https://d3mzeaoeeawjex.cloudfront.net/movie/dayandnight/index.m3u8",
+                                            "title": "Day and Night",
+                                            "id": 7
+                                        }}>
+                                            <figure className="orbit-figure">
+                                                <img className="orbit-image"
+                                                    src={'https://d3mzeaoeeawjex.cloudfront.net/movie/banner/dayandnight-banner.png'}
+                                                    alt="Space" />
+                                                <figcaption className="orbit-caption">{'Day and Night'}</figcaption>
+                                            </figure>
+                                        </Link>
+                                    </li>
 
 
-                                <li className="orbit-slide">
-                                    <Link to={"/home/video/2"}>
-                                        <figure className="orbit-figure">
-                                            <img className="orbit-image"
-                                                src={"https://media.cntraveller.com/photos/611bf0b8f6bd8f17556db5e4/master/pass/gettyimages-1146431497.jpg"}
-                                                alt="Space" />
-                                            <figcaption className="orbit-caption">Lets Rocket!</figcaption>
-                                        </figure>
-                                    </Link>
-                                </li>
+                                    <li className="is-active orbit-slide">
+                                        <Link to={{ pathname: "/movie" + "/video/" + 7 }} state={{
+                                            "banner": "https://d3mzeaoeeawjex.cloudfront.net/movie/banner/laluna-banner.jpg",
+                                            "url": "https://d3mzeaoeeawjex.cloudfront.net/movie/laluna/index.m3u8",
+                                            "title": "Laluna",
+                                            "id": 4
+                                        }}>
+                                            <figure className="orbit-figure">
+                                                <img className="orbit-image"
+                                                    src={'https://d3mzeaoeeawjex.cloudfront.net/movie/banner/laluna-banner.jpg'}
+                                                    alt="Space" />
+                                                <figcaption className="orbit-caption">{'Laluna'}</figcaption>
+                                            </figure>
+                                        </Link>
+                                    </li>
 
-                            </ul>
+                                </ul>) : (
+
+                                <ul className="orbit-container">
+
+                                    <li className="is-active orbit-slide">
+                                        <Link to={{ pathname: "/anime" + "/video/" + 8 }} state={{
+                                            "banner": "https://d3mzeaoeeawjex.cloudfront.net/anime/thumbnail/hungrydays-onepiece-banner.webp",
+                                            "url": "https://d3mzeaoeeawjex.cloudfront.net/anime/onepiece-hungrydays/hungry-days-bump-of-chicken.m3u8",
+                                            "title": "OnePiece Hungry Days",
+                                            "id": 8
+                                        }}>
+                                            <figure className="orbit-figure">
+                                                <img className="orbit-image"
+                                                    src={'https://d3mzeaoeeawjex.cloudfront.net/anime/thumbnail/hungrydays-onepiece-banner.webp'}
+                                                    alt="Space" />
+                                                <figcaption className="orbit-caption">{'OnePiece Hungry Dayst'}</figcaption>
+                                            </figure>
+                                        </Link>
+                                    </li>
+
+
+                                    <li className="is-active orbit-slide">
+                                        <Link to={{ pathname: "/anime" + "/video/" + 9 }} state={{
+                                            "banner": "https://d3mzeaoeeawjex.cloudfront.net/anime/thumbnail/spyfamily-banner.webp",
+                                            "url": "https://d3mzeaoeeawjex.cloudfront.net/anime/spyfamily/index.m3u8",
+                                            "title": "Spy Family",
+                                            "id": 9
+                                        }}>
+                                            <figure className="orbit-figure">
+                                                <img className="orbit-image"
+                                                    src={'https://d3mzeaoeeawjex.cloudfront.net/anime/thumbnail/spyfamily-banner.webp'}
+                                                    alt="Space" />
+                                                <figcaption className="orbit-caption">{'Spy Family'}</figcaption>
+                                            </figure>
+                                        </Link>
+                                    </li>
+
+                                </ul>
+
+
+                            )}
 
                         </div>
                         <nav className="orbit-bullets">
@@ -127,10 +205,10 @@ export default function Contents() {
 
 
                     {Array.isArray(data) && data.map((item) => (
-                    // 데이터 배열을 순회하며 각 항목을 DOM 요소로 변환합니다.
+                        // 데이터 배열을 순회하며 각 항목을 DOM 요소로 변환합니다.
 
-                        <Link to={{pathname : "/" + category + "/video/" + item.id}} state={item} className={"column"} key={item.id}>
-                            <img className="thumbnail" src={item.thumbnail} alt={""}/>
+                        <Link to={{ pathname: "/" + category + "/video/" + item.id }} state={item} className={"column"} key={item.id}>
+                            <img className="thumbnail" src={item.thumbnail} alt={""} />
                             <h5>{item.title}</h5>
                         </Link>
 

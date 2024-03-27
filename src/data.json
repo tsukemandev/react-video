@@ -3,24 +3,18 @@
         "type" : "movie",
         "path" : "/movie",
         "name" : "영화",
-        "banner" : [
+        "banners" : [
             {
-                "thumbnail" : "/profile/color_profile.png",
-                "url" : "https://d1buzuj0s6bbq3.cloudfront.net/hungry-days-bump-of-chicken.m3u8",
-                "title" : "1",
-                "id" : 1
+                "banner" : "https://d3mzeaoeeawjex.cloudfront.net/movie/banner/dayandnight-banner.png",
+                "url" : "https://d3mzeaoeeawjex.cloudfront.net/movie/dayandnight/index.m3u8",
+                "title" : "Day and Night",
+                "id" : 7
             },
             {
-                "thumbnail" : "https://media.cntraveller.com/photos/611bf0b8f6bd8f17556db5e4/master/pass/gettyimages-1146431497.jpg",
-                "url" : "https://d1buzuj0s6bbq3.cloudfront.net/hungry-days-bump-of-chicken.m3u8",
-                "title" : "2",
-                "id" : 2
-            },
-            {
-                "thumbnail" : "https://d3mzeaoeeawjex.cloudfront.net/movie/laluna/laluna/index.m3u8",
-                "url" : "https://d1buzuj0s6bbq3.cloudfront.net/hungry-days-bump-of-chicken.m3u8",
-                "title" : "3",
-                "id" : 3
+                "banner" : "https://d3mzeaoeeawjex.cloudfront.net/movie/banner/laluna-banner.jpg",
+                "url" : "https://d3mzeaoeeawjex.cloudfront.net/movie/laluna/index.m3u8",
+                "title" : "Laluna",
+                "id" : 4
             }
         ],
         "data" : [
@@ -38,21 +32,33 @@
             },
             {
                 "thumbnail" : "https://d3mzeaoeeawjex.cloudfront.net/movie/thumbnail/burn-e.jpg",
-                "url" : "https://d3mzeaoeeawjex.cloudfront.net/movie/burn-e/burn-e/index.m3u8",
+                "url" : "https://d3mzeaoeeawjex.cloudfront.net/movie/burn-e/index.m3u8",
                 "title" : "Burn-E",
                 "id" : 3
             },
             {
-                "thumbnail" : "https://d3mzeaoeeawjex.cloudfront.net/movie/thumbnail/day-and-night.jpg",
-                "url" : "https://d3mzeaoeeawjex.cloudfront.net/movie/day-and-night/day-and-night/index.m3u8",
-                "title" : "Day and Night",
+                "thumbnail" : "https://d3mzeaoeeawjex.cloudfront.net/movie/thumbnail/laluna.png",
+                "url" : "https://d3mzeaoeeawjex.cloudfront.net/movie/laluna/index.m3u8",
+                "title" : "Laluna",
                 "id" : 4
             },
             {
-                "thumbnail" : "https://d3mzeaoeeawjex.cloudfront.net/movie/thumbnail/laluna.jpg",
-                "url" : "https://d3mzeaoeeawjex.cloudfront.net/movie/laluna/laluna/index.m3u8",
-                "title" : "Laluna",
+                "thumbnail" : "https://d3mzeaoeeawjex.cloudfront.net/movie/thumbnail/dougs-mission.jpg",
+                "url" : "https://d3mzeaoeeawjex.cloudfront.net/movie/dougs-mission/index.m3u8",
+                "title" : "Dougs Mission",
                 "id" : 5
+            },
+            {
+                "thumbnail" : "https://d3mzeaoeeawjex.cloudfront.net/movie/thumbnail/smallfly.png",
+                "url" : "https://d3mzeaoeeawjex.cloudfront.net/movie/toystory-smallfly/index.m3u8",
+                "title" : "ToyStory SmallFly",
+                "id" : 6
+            },
+            {
+                "thumbnail" : "https://d3mzeaoeeawjex.cloudfront.net/movie/thumbnail/day-and-night.jpg",
+                "url" : "https://d3mzeaoeeawjex.cloudfront.net/movie/dayandnight/index.m3u8",
+                "title" : "Day and Night",
+                "id" : 7
             }
         ]
     },
@@ -61,38 +67,38 @@
         "type" : "anime",
         "path" : "/anime",
         "name" : "애니메이션",
-        "banner" : [
+        "banners" : [
             {
-                "thumbnail" : "https://media.cntraveller.com/photos/611bf0b8f6bd8f17556db5e4/master/pass/gettyimages-1146431497.jpg",
-                "url" : "https://d1buzuj0s6bbq3.cloudfront.net/hungry-days-bump-of-chicken.m3u8",
-                "title" : "1",
-                "id" : 6
+                "banner" : "https://d3mzeaoeeawjex.cloudfront.net/anime/thumbnail/hungrydays-onepiece-banner.webp",
+                "url" : "https://d3mzeaoeeawjex.cloudfront.net/anime/onepiece-hungrydays/hungry-days-bump-of-chicken.m3u8",
+                "title" : "OnePiece Hungry Days",
+                "id" : 8
             },
             {
-                "thumbnail" : "https://media.cntraveller.com/photos/611bf0b8f6bd8f17556db5e4/master/pass/gettyimages-1146431497.jpg",
-                "url" : "https://d1buzuj0s6bbq3.cloudfront.net/hungry-days-bump-of-chicken.m3u8",
-                "title" : "2",
-                "id" : 7
+                "banner" : "https://d3mzeaoeeawjex.cloudfront.net/anime/thumbnail/spyfamily-banner.webp",
+                "url" : "https://d3mzeaoeeawjex.cloudfront.net/anime/spyfamily/index.m3u8",
+                "title" : "Spy Family",
+                "id" : 9
             }
         ],
         "data" : [
             {
-                "thumbnail" : "https://media.cntraveller.com/photos/611bf0b8f6bd8f17556db5e4/master/pass/gettyimages-1146431497.jpg",
+                "thumbnail" : "https://d3mzeaoeeawjex.cloudfront.net/anime/thumbnail/hungrydays-onepice.jpg",
                 "url" : "https://d3mzeaoeeawjex.cloudfront.net/anime/onepiece-hungrydays/hungry-days-bump-of-chicken.m3u8",
-                "title" : "1",
-                "id" : 6
-            },
-            {
-                "thumbnail" : "https://media.cntraveller.com/photos/611bf0b8f6bd8f17556db5e4/master/pass/gettyimages-1146431497.jpg",
-                "url" : "https://d1buzuj0s6bbq3.cloudfront.net/hungry-days-bump-of-chicken.m3u8",
-                "title" : "2",
-                "id" : 7
-            },
-            {
-                "thumbnail" : "https://media.cntraveller.com/photos/611bf0b8f6bd8f17556db5e4/master/pass/gettyimages-1146431497.jpg",
-                "url" : "https://d1buzuj0s6bbq3.cloudfront.net/hungry-days-bump-of-chicken.m3u8",
-                "title" : "3",
+                "title" : "OnePiece Hungry Days",
                 "id" : 8
+            },
+            {
+                "thumbnail" : "https://d3mzeaoeeawjex.cloudfront.net/anime/thumbnail/Delicious-in-Dungeon.jpg",
+                "url" : "https://d3mzeaoeeawjex.cloudfront.net/anime/delicious-in-dungeon/index.m3u8",
+                "title" : "Delicious in Dungeon",
+                "id" : 9
+            },
+            {
+                "thumbnail" : "https://d3mzeaoeeawjex.cloudfront.net/anime/thumbnail/spyfamily.jpg",
+                "url" : "https://d3mzeaoeeawjex.cloudfront.net/anime/spyfamily/index.m3u8",
+                "title" : "Spy Family",
+                "id" : 10
             }
         ]
     }
