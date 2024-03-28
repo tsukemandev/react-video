@@ -269,6 +269,18 @@ export default function Contents() {
                             <img className="thumbnail" src={'https://d2ktbn03f68jht.cloudfront.net/movie/thumbnail/day-and-night.jpg'} alt={""} />
                             <h5>{'Day and Night'}</h5>
                         </Link>
+
+
+                        <Link to={{ pathname: "/movie/video/" + 10 }} state={{
+                            "thumbnail": "https://d2ktbn03f68jht.cloudfront.net/movie/thumbnail/day-and-night.jpg",
+                            "url": "https://vz-cea98c59-23c.b-cdn.net/c309129c-27b6-4e43-8254-62a15c77c5ee/1280x720/video.m3u8",
+                            "title": "폭포수",
+                            "id": 10
+                        }} className={"column"}>
+                            <img className="thumbnail" src={'https://d2ktbn03f68jht.cloudfront.net/movie/thumbnail/day-and-night.jpg'} alt={""} />
+                            <h5>{'폭포수'}</h5>
+                        </Link>
+
                     </div>) : <div className="row small-up-2 medium-up-3 large-up-4">
 
 
