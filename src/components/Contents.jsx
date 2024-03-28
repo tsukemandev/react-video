@@ -115,14 +115,14 @@ export default function Contents() {
 
                                     <li className="is-active orbit-slide">
                                         <Link to={{ pathname: "/movie" + "/video/" + 4 }} state={{
-                                            "banner": "https://d15hrwnd04s9fc.cloudfront.net/movie/banner/dayandnight-banner.png",
-                                            "url": "https://d15hrwnd04s9fc.cloudfront.net/movie/dayandnight/index.m3u8",
+                                            "banner": "https://d2ktbn03f68jht.cloudfront.net/movie/banner/dayandnight-banner.png",
+                                            "url": "https://d2ktbn03f68jht.cloudfront.net/movie/dayandnight/stream_0/stream_0.m3u8",
                                             "title": "Day and Night",
                                             "id": 7
                                         }}>
                                             <figure className="orbit-figure">
                                                 <img className="orbit-image"
-                                                    src={'https://d15hrwnd04s9fc.cloudfront.net/movie/banner/dayandnight-banner.png'}
+                                                    src={'https://d2ktbn03f68jht.cloudfront.net/movie/banner/dayandnight-banner.png'}
                                                     alt="Space" />
                                                 <figcaption className="orbit-caption">{'Day and Night'}</figcaption>
                                             </figure>
@@ -132,14 +132,14 @@ export default function Contents() {
 
                                     <li className="is-active orbit-slide">
                                         <Link to={{ pathname: "/movie" + "/video/" + 7 }} state={{
-                                            "banner": "https://d15hrwnd04s9fc.cloudfront.net/movie/banner/laluna-banner.jpg",
-                                            "url": "https://d15hrwnd04s9fc.cloudfront.net/movie/laluna/index.m3u8",
+                                            "banner": "https://d2ktbn03f68jht.cloudfront.net/movie/banner/laluna-banner.jpg",
+                                            "url": "https://d2ktbn03f68jht.cloudfront.net/movie/laluna/stream_0/stream_0.m3u8",
                                             "title": "Laluna",
                                             "id": 4
                                         }}>
                                             <figure className="orbit-figure">
                                                 <img className="orbit-image"
-                                                    src={'https://d15hrwnd04s9fc.cloudfront.net/movie/banner/laluna-banner.jpg'}
+                                                    src={'https://d2ktbn03f68jht.cloudfront.net/movie/banner/laluna-banner.jpg'}
                                                     alt="Space" />
                                                 <figcaption className="orbit-caption">{'Laluna'}</figcaption>
                                             </figure>
@@ -152,14 +152,14 @@ export default function Contents() {
 
                                     <li className="is-active orbit-slide">
                                         <Link to={{ pathname: "/anime" + "/video/" + 8 }} state={{
-                                            "banner": "https://d15hrwnd04s9fc.cloudfront.net/anime/thumbnail/hungrydays-onepiece-banner.webp",
-                                            "url": "https://d15hrwnd04s9fc.cloudfront.net/anime/onepiece-hungrydays/hungry-days-bump-of-chicken.m3u8",
+                                            "banner": "https://d2ktbn03f68jht.cloudfront.net/anime/thumbnail/hungrydays-onepiece-banner.webp",
+                                            "url": "https://d2ktbn03f68jht.cloudfront.net/anime/onepiece-hungrydays/hungry-days-bump-of-chicken.m3u8",
                                             "title": "OnePiece Hungry Days",
                                             "id": 8
                                         }}>
                                             <figure className="orbit-figure">
                                                 <img className="orbit-image"
-                                                    src={'https://d15hrwnd04s9fc.cloudfront.net/anime/thumbnail/hungrydays-onepiece-banner.webp'}
+                                                    src={'https://d2ktbn03f68jht.cloudfront.net/anime/thumbnail/hungrydays-onepiece-banner.webp'}
                                                     alt="Space" />
                                                 <figcaption className="orbit-caption">{'OnePiece Hungry Dayst'}</figcaption>
                                             </figure>
@@ -169,14 +169,14 @@ export default function Contents() {
 
                                     <li className="is-active orbit-slide">
                                         <Link to={{ pathname: "/anime" + "/video/" + 9 }} state={{
-                                            "banner": "https://d15hrwnd04s9fc.cloudfront.net/anime/thumbnail/spyfamily-banner.webp",
-                                            "url": "https://d15hrwnd04s9fc.cloudfront.net/anime/spyfamily/index.m3u8",
+                                            "banner": "https://d2ktbn03f68jht.cloudfront.net/anime/thumbnail/spyfamily-banner.webp",
+                                            "url": "https://d2ktbn03f68jht.cloudfront.net/anime/spyfamily/index.m3u8",
                                             "title": "Spy Family",
                                             "id": 9
                                         }}>
                                             <figure className="orbit-figure">
                                                 <img className="orbit-image"
-                                                    src={'https://d15hrwnd04s9fc.cloudfront.net/anime/thumbnail/spyfamily-banner.webp'}
+                                                    src={'https://d2ktbn03f68jht.cloudfront.net/anime/thumbnail/spyfamily-banner.webp'}
                                                     alt="Space" />
                                                 <figcaption className="orbit-caption">{'Spy Family'}</figcaption>
                                             </figure>
@@ -192,77 +192,125 @@ export default function Contents() {
                         <nav className="orbit-bullets">
                             <button className="is-active" data-slide="0">
                                 <span className="show-for-sr">First slide details.</span>
+
+                            </button>
+                            <button data-slide="1">
+                                <span className="show-for-sr">Second slide details.</span>
                                 <span className="show-for-sr" data-slide-active-label>Current Slide</span>
                             </button>
-                            <button data-slide="1"><span className="show-for-sr">Second slide details.</span></button>
                             {/*<button data-slide="2"><span className="show-for-sr">Third slide details.</span></button>
                             <button data-slide="3"><span className="show-for-sr">Fourth slide details.</span></button>*/}
                         </nav>
                     </div>
                 </div>
 
-                <div className="row small-up-2 medium-up-3 large-up-4">
-
-
-                    {Array.isArray(data) && data.map((item) => (
-                        // 데이터 배열을 순회하며 각 항목을 DOM 요소로 변환합니다.
-
-                        <Link to={{ pathname: "/" + category + "/video/" + item.id }} state={item} className={"column"} key={item.id}>
-                            <img className="thumbnail" src={item.thumbnail} alt={""} />
-                            <h5>{item.title}</h5>
+                {isMovie ? (
+                    <div className="row small-up-2 medium-up-3 large-up-4">
+                        <Link to={{ pathname: "/movie/video/" + 1 }} state={{
+                            "thumbnail": "https://d2ktbn03f68jht.cloudfront.net/movie/thumbnail/boundin.jpg",
+                            "url": "https://d2ktbn03f68jht.cloudfront.net/movie/boundin/stream_0/stream_0.m3u8",
+                            "title": "Bound In",
+                            "id": 1
+                        }} className={"column"}>
+                            <img className="thumbnail" src={'https://d2ktbn03f68jht.cloudfront.net/movie/thumbnail/boundin.jpg'} alt={""} />
+                            <h5>{'Bound In'}</h5>
                         </Link>
+                        <Link to={{ pathname: "/movie/video/" + 2 }} state={{
+                            "thumbnail": "https://d2ktbn03f68jht.cloudfront.net/movie/thumbnail/air-master.jpg",
+                            "url": "https://d2ktbn03f68jht.cloudfront.net/movie/airmaster/stream_0/stream_0.m3u8",
+                            "title": "Air Master",
+                            "id": 2
+                        }} className={"column"}>
+                            <img className="thumbnail" src={'https://d2ktbn03f68jht.cloudfront.net/movie/thumbnail/air-master.jpg'} alt={""} />
+                            <h5>{'Air Master'}</h5>
+                        </Link>
+                        <Link to={{ pathname: "/movie/video/" + 3 }} state={{
+                            "thumbnail": "https://d2ktbn03f68jht.cloudfront.net/movie/thumbnail/burn-e.jpg",
+                            "url": "https://d2ktbn03f68jht.cloudfront.net/movie/burn-e/stream_0/stream_0.m3u8",
+                            "title": "Burn-E",
+                            "id": 3
+                        }} className={"column"}>
+                            <img className="thumbnail" src={'https://d2ktbn03f68jht.cloudfront.net/movie/thumbnail/burn-e.jpg'} alt={""} />
+                            <h5>{'Burn-E'}</h5>
+                        </Link>
+                        <Link to={{ pathname: "/movie/video/" + 4 }} state={{
+                            "thumbnail": "https://d2ktbn03f68jht.cloudfront.net/movie/thumbnail/laluna.png",
+                            "url": "https://d2ktbn03f68jht.cloudfront.net/movie/laluna/stream_0/stream_0.m3u8",
+                            "title": "Laluna",
+                            "id": 4
+                        }} className={"column"}>
+                            <img className="thumbnail" src={'https://d2ktbn03f68jht.cloudfront.net/movie/thumbnail/laluna.png'} alt={""} />
+                            <h5>{'Laluna'}</h5>
+                        </Link>
+                        <Link to={{ pathname: "/movie/video/" + 5 }} state={{
+                            "thumbnail": "https://d2ktbn03f68jht.cloudfront.net/movie/thumbnail/dougs-mission.jpg",
+                            "url": "https://d2ktbn03f68jht.cloudfront.net/movie/dougs-mission/stream_0/stream_0.m3u8",
+                            "title": "Dougs Mission",
+                            "id": 5
+                        }} className={"column"}>
+                            <img className="thumbnail" src={'https://d2ktbn03f68jht.cloudfront.net/movie/thumbnail/dougs-mission.jpg'} alt={""} />
+                            <h5>{'Dougs Mission'}</h5>
+                        </Link>
+                        <Link to={{ pathname: "/movie/video/" + 6 }} state={{
+                            "thumbnail": "https://d2ktbn03f68jht.cloudfront.net/movie/thumbnail/smallfly.png",
+                            "url": "https://d2ktbn03f68jht.cloudfront.net/movie/toystory-smallfly/stream_0/stream_0.m3u8",
+                            "title": "ToyStory SmallFly",
+                            "id": 6
+                        }} className={"column"}>
+                            <img className="thumbnail" src={'https://d2ktbn03f68jht.cloudfront.net/movie/thumbnail/smallfly.png'} alt={""} />
+                            <h5>{'ToyStory SmallFly'}</h5>
+                        </Link>
+                        <Link to={{ pathname: "/movie/video/" + 7 }} state={{
+                            "thumbnail": "https://d2ktbn03f68jht.cloudfront.net/movie/thumbnail/day-and-night.jpg",
+                            "url": "https://d2ktbn03f68jht.cloudfront.net/movie/dayandnight/stream_0/stream_0.m3u8",
+                            "title": "Day and Night",
+                            "id": 7
+                        }} className={"column"}>
+                            <img className="thumbnail" src={'https://d2ktbn03f68jht.cloudfront.net/movie/thumbnail/day-and-night.jpg'} alt={""} />
+                            <h5>{'Day and Night'}</h5>
+                        </Link>
+                    </div>) : <div className="row small-up-2 medium-up-3 large-up-4">
 
-                    ))}
 
-                    {/*
-                    <Link to={"/home/video/1"} className={"column"}>
-                        <img className="thumbnail" src={process.env.PUBLIC_URL + "/test/1.png"} alt={""}/>
-                        <h5>My Site</h5>
-                    </Link>
-                    <Link to={"/home/video/2"} className={"column"}>
-                        <img className="thumbnail" src={process.env.PUBLIC_URL + "/test/2.png"}/>
-                        <h5>My Site</h5>
-                    </Link>
-                    <Link to={"/home/video/3"} className={"column"}>
-                        <img className="thumbnail" src={process.env.PUBLIC_URL + "/test/3.png"}/>
-                        <h5>My Site</h5>
-                    </Link>
-                    <Link to={"/home/video/4"} className={"column"}>
-                        <img className="thumbnail" src={process.env.PUBLIC_URL + "/test/dog_1.gif"}/>
-                        <h5>My Site</h5>
-                    </Link>
-                    <Link to={"/home/video/5"} className={"column"}>
-                        <img className="thumbnail" src={process.env.PUBLIC_URL + "/test/dog_2.gif"}/>
-                        <h5>My Site</h5>
-                    </Link>
-                    <Link to={"/home/video/6"} className={"column"}>
-                        <img className="thumbnail" src={process.env.PUBLIC_URL + "/test/dog_3.gif"}/>
-                        <h5>My Site</h5>
-                    </Link>
-                    <Link to={"/home/video/7"} className={"column"}>
-                        <img className="thumbnail" src={process.env.PUBLIC_URL + "/test/music_1.gif"}/>
-                        <h5>My Site</h5>
-                    </Link>
-                    <Link to={"/home/video/8"} className={"column"}>
-                        <img className="thumbnail" src={process.env.PUBLIC_URL + "/test/music_2.gif"}/>
-                        <h5>My Site</h5>
-                    </Link>
-                    <Link to={"/home/video/9"} className={"column"}>
-                        <img className="thumbnail" src={process.env.PUBLIC_URL + "/test/panda_1.gif"}/>
-                        <h5>My Site</h5>
-                    </Link>
-                    <Link to={"/home/video/10"} className={"column"}>
-                        <img className="thumbnail" src={process.env.PUBLIC_URL + "/test/panda_2.gif"}/>
-                        <h5>My Site</h5>
-                    </Link>
-                    <Link to={"/home/video/11"} className={"column"}>
-                        <img className="thumbnail" src="https://placehold.it/550x550"/>
-                        <h5>My Site</h5>
-                </Link> */}
 
-                </div>
+
+
+                    <Link to={{ pathname: "/anime/video/" + 8 }} state={{
+                        "thumbnail": "https://d2ktbn03f68jht.cloudfront.net/anime/thumbnail/hungrydays-onepice.jpg",
+                        "url": "https://d2ktbn03f68jht.cloudfront.net/anime/onepiece-hungrydays/hungry-days-bump-of-chicken.m3u8",
+                        "title": "OnePiece Hungry Days",
+                        "id": 8
+                    }} className={"column"}>
+                        <img className="thumbnail" src={'https://d2ktbn03f68jht.cloudfront.net/anime/thumbnail/hungrydays-onepice.jpg'} alt={""} />
+                        <h5>{'OnePiece Hungry Days'}</h5>
+                    </Link>
+
+
+                    <Link to={{ pathname: "/anime/video/" + 9 }} state={{
+                        "thumbnail": "https://d2ktbn03f68jht.cloudfront.net/anime/thumbnail/Delicious-in-Dungeon.jpg",
+                        "url": "https://d2ktbn03f68jht.cloudfront.net/anime/delicious-in-dungeon/index.m3u8",
+                        "title": "Delicious in Dungeon",
+                        "id": 9
+                    }} className={"column"}>
+                        <img className="thumbnail" src={'https://d2ktbn03f68jht.cloudfront.net/anime/thumbnail/Delicious-in-Dungeon.jpg'} alt={""} />
+                        <h5>{'Delicious in Dungeon'}</h5>
+                    </Link>
+
+
+                    <Link to={{ pathname: "/anime/video/" + 10 }} state={{
+                        "thumbnail": "https://d2ktbn03f68jht.cloudfront.net/anime/thumbnail/spyfamily.jpg",
+                        "url": "https://d2ktbn03f68jht.cloudfront.net/anime/spyfamily/index.m3u8",
+                        "title": "Spy Family",
+                        "id": 10
+                    }} className={"column"}>
+                        <img className="thumbnail" src={'https://d2ktbn03f68jht.cloudfront.net/anime/thumbnail/spyfamily.jpg'} alt={""} />
+                        <h5>{'Spy Family'}</h5>
+                    </Link>
+
+                </div>}
 
             </div>
+
 
 
         </div>

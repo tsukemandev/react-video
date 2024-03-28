@@ -58,19 +58,6 @@ export default function Content() {
                 
                 <Comments></Comments>
 
-                <form className="comment-section-form">
-                    <div className="comment-section-box">
-                        <div className="row">
-                            <div className="small-12 column" style={{display: 'flex', justifyContent: 'end'}}>
-
-                                
-                                <textarea rows="1" type="text"></textarea>
-                                
-                                <button className="button" style={{width: '100px'}}>입력</button>
-                            </div>
-                        </div>
-                    </div>
-                </form>
                 
             </div>
         </div>

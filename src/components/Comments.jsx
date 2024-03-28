@@ -12,13 +12,12 @@ export default function Comments() {
                 </span>
                 <span className={"comment_wrapper"}>
                     <span className={"comment_wrapper_top"}>
-                        <h4 className={"nick_name"}>테스트닉네임1</h4>
+                        <h4 className={"nick_name"}>테스터1</h4>
                         <div className={"date"}>3 hour ago</div>
                     </span>
                     <span className={"comment_wrapper_bottom"}>
-                        <span>심플 비디오 댓글 테스트!!!</span>
-                        <span>심플 비디오 댓글 테스트!!!</span>
-                        <span>심플 비디오 댓글 테스트!!!</span>
+                        <span>해당 프로젝트는 React.js 를 활용하여 만든</span>
+                        <span>주문형 비디오 서비스입니다.</span>
                     </span>
                 </span>
                 <span className={"like_wrapper"}>
@@ -37,13 +36,12 @@ export default function Comments() {
                 </span>
                 <span className={"comment_wrapper"}>
                     <span className={"comment_wrapper_top"}>
-                        <h4 className={"nick_name"}>테스트닉네임2</h4>
+                        <h4 className={"nick_name"}>테스터2</h4>
                         <div className={"date"}>5 hour ago</div>
                     </span>
                     <span className={"comment_wrapper_bottom"}>
-                        <span>심플 비디오 댓글 테스트!!!</span>
-                        <span>심플 비디오 댓글 테스트!!!</span>
-                        <span>심플 비디오 댓글 테스트!!!</span>
+                        <span>해당 프로젝트는 React.js 를 활용하여 만든</span>
+                        <span>주문형 비디오 서비스입니다.</span>
                     </span>
                 </span>
                 <span className={"like_wrapper"}>
