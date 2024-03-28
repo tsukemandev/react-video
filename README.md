@@ -25,13 +25,17 @@ Video.js 를 사용하여 Nginx HLS 스트리밍 기능을 구현한 프로젝�
 ### [Foundation](https://get.foundation/)
 
 
-## 백엔드 구현
+## 백엔드
 
-AWS Lambda, Node.js
+Spring Boot
 
-## DB 
+## 서버
 
-MongoDB
+AWS EC2
+
+## HLS 스트리밍 서버
+
+AWS S3, Cloud Front
 
 
 ## 운영중 블로그 주소
