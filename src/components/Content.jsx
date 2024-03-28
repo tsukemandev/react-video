@@ -30,6 +30,7 @@ export default function Content() {
     const handlePlayerReady = (player) => {
         playerRef.current = player;
 
+        console.log('data url : ' + data.url)
         // You can handle player events here, for example:
         player.on('waiting', () => {
             videojs.log('player is waiting');

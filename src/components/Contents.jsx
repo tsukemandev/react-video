@@ -115,14 +115,14 @@ export default function Contents() {
 
                                     <li className="is-active orbit-slide">
                                         <Link to={{ pathname: "/movie" + "/video/" + 4 }} state={{
-                                            "banner": "https://d3mzeaoeeawjex.cloudfront.net/movie/banner/dayandnight-banner.png",
-                                            "url": "https://d3mzeaoeeawjex.cloudfront.net/movie/dayandnight/index.m3u8",
+                                            "banner": "https://d15hrwnd04s9fc.cloudfront.net/movie/banner/dayandnight-banner.png",
+                                            "url": "https://d15hrwnd04s9fc.cloudfront.net/movie/dayandnight/index.m3u8",
                                             "title": "Day and Night",
                                             "id": 7
                                         }}>
                                             <figure className="orbit-figure">
                                                 <img className="orbit-image"
-                                                    src={'https://d3mzeaoeeawjex.cloudfront.net/movie/banner/dayandnight-banner.png'}
+                                                    src={'https://d15hrwnd04s9fc.cloudfront.net/movie/banner/dayandnight-banner.png'}
                                                     alt="Space" />
                                                 <figcaption className="orbit-caption">{'Day and Night'}</figcaption>
                                             </figure>
@@ -132,14 +132,14 @@ export default function Contents() {
 
                                     <li className="is-active orbit-slide">
                                         <Link to={{ pathname: "/movie" + "/video/" + 7 }} state={{
-                                            "banner": "https://d3mzeaoeeawjex.cloudfront.net/movie/banner/laluna-banner.jpg",
-                                            "url": "https://d3mzeaoeeawjex.cloudfront.net/movie/laluna/index.m3u8",
+                                            "banner": "https://d15hrwnd04s9fc.cloudfront.net/movie/banner/laluna-banner.jpg",
+                                            "url": "https://d15hrwnd04s9fc.cloudfront.net/movie/laluna/index.m3u8",
                                             "title": "Laluna",
                                             "id": 4
                                         }}>
                                             <figure className="orbit-figure">
                                                 <img className="orbit-image"
-                                                    src={'https://d3mzeaoeeawjex.cloudfront.net/movie/banner/laluna-banner.jpg'}
+                                                    src={'https://d15hrwnd04s9fc.cloudfront.net/movie/banner/laluna-banner.jpg'}
                                                     alt="Space" />
                                                 <figcaption className="orbit-caption">{'Laluna'}</figcaption>
                                             </figure>
@@ -152,14 +152,14 @@ export default function Contents() {
 
                                     <li className="is-active orbit-slide">
                                         <Link to={{ pathname: "/anime" + "/video/" + 8 }} state={{
-                                            "banner": "https://d3mzeaoeeawjex.cloudfront.net/anime/thumbnail/hungrydays-onepiece-banner.webp",
-                                            "url": "https://d3mzeaoeeawjex.cloudfront.net/anime/onepiece-hungrydays/hungry-days-bump-of-chicken.m3u8",
+                                            "banner": "https://d15hrwnd04s9fc.cloudfront.net/anime/thumbnail/hungrydays-onepiece-banner.webp",
+                                            "url": "https://d15hrwnd04s9fc.cloudfront.net/anime/onepiece-hungrydays/hungry-days-bump-of-chicken.m3u8",
                                             "title": "OnePiece Hungry Days",
                                             "id": 8
                                         }}>
                                             <figure className="orbit-figure">
                                                 <img className="orbit-image"
-                                                    src={'https://d3mzeaoeeawjex.cloudfront.net/anime/thumbnail/hungrydays-onepiece-banner.webp'}
+                                                    src={'https://d15hrwnd04s9fc.cloudfront.net/anime/thumbnail/hungrydays-onepiece-banner.webp'}
                                                     alt="Space" />
                                                 <figcaption className="orbit-caption">{'OnePiece Hungry Dayst'}</figcaption>
                                             </figure>
@@ -169,14 +169,14 @@ export default function Contents() {
 
                                     <li className="is-active orbit-slide">
                                         <Link to={{ pathname: "/anime" + "/video/" + 9 }} state={{
-                                            "banner": "https://d3mzeaoeeawjex.cloudfront.net/anime/thumbnail/spyfamily-banner.webp",
-                                            "url": "https://d3mzeaoeeawjex.cloudfront.net/anime/spyfamily/index.m3u8",
+                                            "banner": "https://d15hrwnd04s9fc.cloudfront.net/anime/thumbnail/spyfamily-banner.webp",
+                                            "url": "https://d15hrwnd04s9fc.cloudfront.net/anime/spyfamily/index.m3u8",
                                             "title": "Spy Family",
                                             "id": 9
                                         }}>
                                             <figure className="orbit-figure">
                                                 <img className="orbit-image"
-                                                    src={'https://d3mzeaoeeawjex.cloudfront.net/anime/thumbnail/spyfamily-banner.webp'}
+                                                    src={'https://d15hrwnd04s9fc.cloudfront.net/anime/thumbnail/spyfamily-banner.webp'}
                                                     alt="Space" />
                                                 <figcaption className="orbit-caption">{'Spy Family'}</figcaption>
                                             </figure>
