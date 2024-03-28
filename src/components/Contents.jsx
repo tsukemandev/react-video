@@ -22,13 +22,6 @@ export default function Contents() {
     useEffect(() => {
         // location.state가 변경될 때마다 실행될 로직
 
-        if (location.state) {
-            setBanners(location.state.banners)
-            setData(location.state.data)
-        }
-        console.log('location useEffect')
-        setCategory(window.location.pathname.split('/')[1])
-
         setIsMovie(window.location.pathname.split('/')[1] === 'movie')
     }, [location]);
 
@@ -59,38 +52,13 @@ export default function Contents() {
     }*/
 
 
-    useEffect(() => {
-        setTimeout(() => {
-            Jquery(document).ready($ => {
-                $(document).foundation()
-            })
-        }, 500)
-
-
-    }, [data, banners]);
-
 
 
     useEffect(() => {
 
-        if (!data || data.length <= 0) {
-            setData(testData[0].data)
-            console.log('test1')
-            if (window.location.pathname.split('/')[1] === 'anime') {
-                setData(testData[1].data)
-                console.log('test2')
-            }
-        }
-
-
-    }, [category]);
-
-
-    useEffect(() => {
-
-        const pathname = window.location.pathname;
-        setCategory(pathname.split('/')[1])
-
+        Jquery(document).ready($ => {
+            $(document).foundation()
+        })
 
     }, []);
 
