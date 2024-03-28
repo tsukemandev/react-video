@@ -17,7 +17,7 @@ export default function Comments() {
                     </span>
                     <span className={"comment_wrapper_bottom"}>
                         <span>해당 프로젝트는 React.js 를 활용하여 만든</span>
-                        <span>주문형 비디오 서비스입니다.</span>
+                        <span> 주문형 비디오 서비스입니다.</span>
                     </span>
                 </span>
                 <span className={"like_wrapper"}>
@@ -41,7 +41,7 @@ export default function Comments() {
                     </span>
                     <span className={"comment_wrapper_bottom"}>
                         <span>해당 프로젝트는 React.js 를 활용하여 만든</span>
-                        <span>주문형 비디오 서비스입니다.</span>
+                        <span> 주문형 비디오 서비스입니다.</span>
                     </span>
                 </span>
                 <span className={"like_wrapper"}>
