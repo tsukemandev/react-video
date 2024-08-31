@@ -1,44 +1,58 @@
-# 리액트를 활용한 스트리밍 서비스
 
-Video.js 를 사용하여 Nginx HLS 스트리밍 기능을 구현한 프로젝트
+<h1 align="center">
+  <br>
+  HLS VIDEO TOY PROJECT
+  <br>
+</h1>
 
-### `npm install`
-
-### `npm start`
-
+## Description
+A project that implements Nginx HLS streaming functionality using Video.js
 <br>
+
+
 
 ![img](/public/test/preview_02.png)
 ![img](/public/preview.jpg)
 ![img](/public/test/preview_03.jpg)
 
-## 사용한 모듈 및 패키지
+## Getting Started
 
-[Nginx-rtmp-module](https://github.com/arut/nginx-rtmp-module)
+### Dependencies
 
-[video.js](https://github.com/videojs/video.js.git)
+* Chrome or Edge Browser
+* Node.js
+* NPM
 
-[video.js-커스텀테마](https://github.com/videojs/themes)
+### How To Run
 
-## 디자인 프레임워크
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js 18 or higher](https://nodejs.org/en/download/package-manager)
 
-### [Foundation](https://get.foundation/)
+```bash
+# Clone this repository
+$ git clone https://github.com/tsukemandev/react-video.git
+
+# Go into the repository
+$ cd react-video
+
+# Run npm install
+$ npm install
+
+# Run wep app
+$ npm start
+
+```
 
 
-## 백엔드
+## Technology Stack
 
-Spring Boot
-
-## 서버
-
-AWS EC2
-
-## HLS 스트리밍 서버
-
-AWS S3, Cloud Front
+* JavaScript
+* React.js ( React-route-dom, React-Helmet )
+* [Nginx-rtmp-module](https://github.com/arut/nginx-rtmp-module)
+* [video.js](https://github.com/videojs/video.js.git)
+* [video.js-custom theme](https://github.com/videojs/themes)
 
 
-## 운영중 블로그 주소
+## Back-end project
 
-https://streamdiaries.com
+[https://github.com/tsukemandev/spring-video-api](https://github.com/tsukemandev/spring-video-api)
 
